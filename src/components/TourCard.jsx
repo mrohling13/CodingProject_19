@@ -1,10 +1,10 @@
 // Task 3: Single Tour Component
 
-import React, { useState } from "react";
+import React, { useState } from "react"; // imports from react
 
-const TourCard = ({ id, name, info, image, price, onRemove }) => {
+const TourCard = ({ id, name, info, image, price, onRemove }) => { // displays tour card information
  
- const [readMore, setReadMore] = useState(false);
+ const [readMore, setReadMore] = useState(false); // allows user to read more about the tour
 
 
  return (

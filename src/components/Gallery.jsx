@@ -1,27 +1,27 @@
 // Task 2: Tour List Component
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; // imports from react 
 
 
 
 
-import TourCard from './TourCard';
+import TourCard from './TourCard'; // imports tour card 
 
 
-const url = 'https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project';
-
-
-
-
-const Gallery = ({ tours, setTours, onRemove }) => {
-
-
- const [loading, setLoading] = useState(true);
+const url = 'https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project'; // the url used to get the tour information
 
 
 
 
- const [error, setError] = useState(false);
+const Gallery = ({ tours, setTours, onRemove }) => { // fetches and displays all tours
+
+
+ const [loading, setLoading] = useState(true); 
+
+
+
+
+ const [error, setError] = useState(false); // displays error message
 
 
  const fetchTours = async () => {
@@ -45,7 +45,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
 
      
-     setError(true);
+     setError(true); // displays error if needed
    } finally {
     
      setLoading(false);
@@ -54,7 +54,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
 
  
- useEffect(() => {
+ useEffect(() => { // runs the fetchTours function
    fetchTours();
  }, []);
 
@@ -91,7 +91,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
 
  
- return (
+ return ( // displays all tours
    <section className="gallery">
      {tours.map((tour) => (
        <TourCard

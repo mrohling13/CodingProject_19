@@ -1,23 +1,23 @@
 // Task 1: Root Component
 
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';  // imports from react
 
-import Gallery from './components/Gallery';
-
-
-import './styles/styles.css';
+import Gallery from './components/Gallery'; // imports gallery component
 
 
-function App() {
+import './styles/styles.css'; // imports the css file for styling
 
 
- const [tours, setTours] = useState([]);
+function App() { // main component for the app
 
 
- const removeTour = (id) => {
+ const [tours, setTours] = useState([]); // lists all tours
 
 
-   setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
+ const removeTour = (id) => { // removes tour from the list
+
+
+   setTours((prevTours) => prevTours.filter((tour) => tour.id !== id)); // updates tour list
  };
 
 
