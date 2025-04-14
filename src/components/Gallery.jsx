@@ -62,7 +62,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
 
 
-
+// Task 4: Loading and Error States
  
  if (loading) {
    return <h2>Loading...</h2>;
